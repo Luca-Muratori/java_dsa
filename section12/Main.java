@@ -6,11 +6,17 @@ class Main{
         // System.out.println(csll.head.next.value);
         csll.insertCSLL(1, 1);
         csll.insertCSLL(2, 2);
-        csll.insertCSLL(3,3);
+        csll.insertCSLL(3, 3);
         csll.insertCSLL(4, 4);
         csll.insertCSLL(5, 3);
-        System.out.println(csll.tail.next.next.value);
+        csll.search(1);
+        // System.out.println(csll.tail.next.next.value);
 
         csll.traverseCSLL();
+        csll.delete(8);
+        csll.traverseCSLL();
+        csll.deleteAll();
+        csll.traverseCSLL();
+
     }
 }

@@ -50,9 +50,75 @@ public class CircularSinglyLL {
                     System.out.print(" -> ");
                 }
                 tempNode=tempNode.next;
+                
             }
+            System.out.println("\n");
         }else{
             System.out.println("scll does not exist");
+        }
+    }
+
+    public boolean search(int nodeValue){
+        if(head!=null){
+            Node tempNode= head;
+            for (int i = 0; i < size; i++) {
+                if(tempNode.value==nodeValue){
+                    System.out.println("found node at location "+ i);
+                    return true;
+                }
+                tempNode=tempNode.next;
+            }
+        }
+        System.out.println("node not found");
+        return false;
+    }    
+
+    public void delete(int location){
+        if(head==null){
+            System.out.println("scll does not exist");
+            return;
+        }else if(location==0){
+            head = head.next;
+            tail.next=head;
+            size--;
+            if(size ==0){
+                tail=null;
+                head.next=null;
+                head=null;
+            }
+        }else if(location>=size){
+            Node tempNode=head;
+            for (int i = 0; i < size-1; i++) {
+                tempNode= tempNode.next;
+            }
+            if(tempNode==head){
+                head.next=null;
+                tail = head = null;
+                return;
+            }
+            tempNode.next=head;
+            tail=tempNode;
+            size--;
+        } else {
+            Node tempNode=head;
+            for (int i = 0; i < location-1; i++) {
+                tempNode=tempNode.next;
+            }
+            tempNode.next=tempNode.next.next;
+            size--;
+        }
+
+
+    }
+
+    public void deleteAll(){
+        if(head==null){
+            System.out.println("scll does not exist");
+        }else{
+            head=null;
+            tail.next=null;
+            tail=null;
+            System.out.println("scll has benn deleted succesfully");
         }
     }
 }
