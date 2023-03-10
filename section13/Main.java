@@ -2,7 +2,7 @@ public class Main{
     public static void main(String[] args) {
         DoublyLinkyList dll=new DoublyLinkyList();
         // dll.create(3);
-        
+
         // System.out.println(dll.head.value);
         dll.insert(1, 0);
         dll.insert(2, 1);
@@ -18,6 +18,7 @@ public class Main{
         dll.traverse();
         dll.deleteAll();
         dll.traverse();
+        System.out.println("finesded");
 
     }
 }
