@@ -14,6 +14,10 @@ public class LinkedList {
     }
 
     public void insert(int nodeValue){
+        if(head==null){
+            createLL(nodeValue);
+            return;
+        }
         Node newNode=new Node();
         newNode.value=nodeValue;
         newNode.next=null;
@@ -65,5 +69,89 @@ public class LinkedList {
             pointer2=pointer2.next;
         }
         return pointer1;
+    }
+
+    public LinkedList partition(LinkedList ll, int x){
+        Node currentNode=head;
+        ll.tail=ll.head;
+        while(currentNode!=null){
+            Node next=currentNode.next;
+            if(currentNode.value<x){
+                currentNode.next=ll.head;
+                ll.head=currentNode;
+            }else{
+                ll.tail.next=currentNode;
+                ll.tail=currentNode;
+            }
+            currentNode=next;
+        }
+        ll.tail.next=null;
+        return ll;
+    }
+
+    public LinkedList sumLists(LinkedList ll1, LinkedList ll2){
+        Node currentNode1=ll1.head;
+        Node currentNode2=ll2.head;
+        int carry=0;
+        LinkedList totalLL=new LinkedList();
+        while (currentNode1!=null||currentNode2!=null) {
+            int result=carry;
+            if(currentNode1!=null){
+                result+=currentNode1.value;
+                currentNode1=currentNode1.next;
+            }
+            if(currentNode2!=null){
+                result+=currentNode2.value;
+                currentNode2=currentNode2.next;
+            }
+            totalLL.insert(result%10);
+            carry=result/10;
+        }
+        return totalLL;
+    }    
+
+
+    public Node getKthNode(Node head, int k){
+        Node currentNode=head;
+        while (k>0 && currentNode!= null) {
+            currentNode=currentNode.next;
+            k--;
+        }
+        return currentNode;
+    }
+
+    public Node findIntersection(LinkedList ll1, LinkedList ll2){
+        if(ll1.head==null || ll2.head==null){
+            return null;
+        }
+        if(ll1.tail==ll2.tail){
+            return null;
+        };
+        Node longer=new Node();
+        Node shorter=new Node();
+        if(ll1.size>ll2.size){
+            longer=ll1.head;
+            shorter=ll2.head;
+        } else {
+            longer=ll2.head;
+            shorter=ll1.head;
+        }
+        longer=getKthNode(longer, Math.abs(ll1.size-ll2.size));
+        while (shorter!=longer) {
+            shorter=shorter.next;
+            longer=longer.next;
+        }
+        return longer;
+    }
+
+    public void addSameNode(LinkedList ll1, LinkedList ll2, int nodeValue){
+        Node newNode=new Node();
+        newNode.value=nodeValue;
+        ll1.tail.next=newNode;
+        ll1.tail=newNode;
+        ll2.tail.next=newNode;
+        ll2.tail=newNode;
+
+        
     }
 }
