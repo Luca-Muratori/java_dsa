@@ -1,0 +1,45 @@
+//QUEUE = data structure that store items in a FIFO manner,
+//like a queue when you want buy something
+//end--------front
+//50-40-30-20-10
+//when we insert an element in it we insert it in the last
+//WHY WE NEED IT? 
+//-point sale system of a restaurant
+//-printer queue
+//-call center phone sistem
+//IMPLEMENTATION
+//  we can use array or linked list
+class  Main{
+    public static void main(String[] args) {
+        // QueueArr queueArr= new QueueArr(5);
+        // queueArr.enQueue(1);
+        // queueArr.enQueue(2);
+        // queueArr.enQueue(3);
+        // queueArr.enQueue(4);
+        // queueArr.enQueue(5);
+        // queueArr.enQueue(6);
+        // queueArr.peek(); 
+        // System.out.println(queueArr.deQueue());  
+        // queueArr.peek(); 
+        // System.out.println(queueArr.deQueue()); 
+        // queueArr.peek(); 
+        // System.out.println(queueArr.deQueue()); 
+        // queueArr.peek(); 
+        // queueArr.deleteQueue();
+        
+        CircularQueue circQueueArr= new CircularQueue(5);
+
+        circQueueArr.enQueueu(1);
+        circQueueArr.enQueueu(2);
+        circQueueArr.enQueueu(3);
+        circQueueArr.enQueueu(4);
+        circQueueArr.peek();
+        System.out.println(circQueueArr.deQueue()); 
+        circQueueArr.enQueueu(66);
+        circQueueArr.peek();
+        System.out.println(circQueueArr.deQueue()); 
+        circQueueArr.peek();
+        circQueueArr.delete();
+        
+    }
+}
