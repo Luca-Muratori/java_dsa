@@ -9,6 +9,13 @@
 //-call center phone sistem
 //IMPLEMENTATION
 //  we can use array or linked list
+//array-because the space complexity of the creation of queue is O(n), the implementation fo queue with arr is not space efficient
+//LL- every function have o(1) for bot time and space complexity
+//WHEN TO USE IT?
+//use it when we need FIFO  funcionality
+//data corruption is minimum, it's impossible to change a value inside a queue
+//AVOID
+//random access is not possible
 class  Main{
     public static void main(String[] args) {
         // QueueArr queueArr= new QueueArr(5);
@@ -27,19 +34,27 @@ class  Main{
         // queueArr.peek(); 
         // queueArr.deleteQueue();
         
-        CircularQueue circQueueArr= new CircularQueue(5);
+        // CircularQueue circQueueArr= new CircularQueue(5);
 
-        circQueueArr.enQueueu(1);
-        circQueueArr.enQueueu(2);
-        circQueueArr.enQueueu(3);
-        circQueueArr.enQueueu(4);
-        circQueueArr.peek();
-        System.out.println(circQueueArr.deQueue()); 
-        circQueueArr.enQueueu(66);
-        circQueueArr.peek();
-        System.out.println(circQueueArr.deQueue()); 
-        circQueueArr.peek();
-        circQueueArr.delete();
+        // circQueueArr.enQueueu(1);
+        // circQueueArr.enQueueu(2);
+        // circQueueArr.enQueueu(3);
+        // circQueueArr.enQueueu(4);
+        // circQueueArr.peek();
+        // System.out.println(circQueueArr.deQueue()); 
+        // circQueueArr.enQueueu(66);
+        // circQueueArr.peek();
+        // System.out.println(circQueueArr.deQueue()); 
+        // circQueueArr.peek();
+        // circQueueArr.delete();
+
+        QueueLL qll=new QueueLL();
+        qll.enQueue(10);
+        qll.enQueue(20);
+        qll.enQueue(30);
+        qll.enQueue(40);
+        qll.enQueue(50);
+        System.out.println(qll.deQueue());
         
     }
 }
