@@ -1,0 +1,27 @@
+TREE
+nonlinear data structure with hierarchial relationship between its elements
+without having any cicle
+
+Propierties
+-represent hierarchial data
+-each node have two components:
+    data and link to its subcategory
+-base category and sub categories under it
+
+Why we need it?
+-quicker and esier access to the data
+-store hierarchial data, like folder structure
+
+Tree terminology
+-root: node that doesn't have a parent (n1)
+-edge: link between parent and child (n1---edge--->n2)
+-leaf:node that doesn't have any children
+-sibling:childrens of the same parents
+-ancestor:parent, greatparent or great-greatparent ecc. of a node
+-depth of node: lenght of the path from root to a given node
+-height of node: lenght of the past from the node to the deepest node
+-depth of tree: depth of root node
+-height of tree: height of root node
+
+
+
