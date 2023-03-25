@@ -23,5 +23,39 @@ Tree terminology
 -depth of tree: depth of root node
 -height of tree: height of root node
 
+BINARY TREE
+data structure where a node have at most 2 children( left and right)
+prerequisite for more advanced models
+we can solve: huffman coding problem, heap priority problem and others
+
+TYpes of binary tree
+-full binary tree
+-perfect binary tree (each node, except for leaf, have 2 children)
+-complete binary tree
+-balanced binary tree
+
+
+create a binary tree
+can be created in 2 ways:
+-linked list                                             -Array
+each node will have 3 components:         | to calculate at which index we need to put the element
+     (left-pointer) data (right-pointer)  | we use a math formula:
+                                          |x=index in the array of the parent element
+                                          |left child =cell(2x)-->x=1-->left children[i=2]
+                                          |right child = cell(2x+1)-->x=1-->right child[i=3]
+
+
+
+                                          
+
+                                        
+
+
+
+
+
+
+
+
 
 
