@@ -104,4 +104,69 @@ public class BinaryTreeLL {
             }
         }
     }
+
+    //we use level order traversal
+    //when deleting we search the deepest node(last node in the order) too, so when we delete the node we assing to the node that we are deleting
+    //the same value as the deepest node
+    public BinaryNode getDeepest(){
+        Queue<BinaryNode> queue=new LinkedList<BinaryNode>();
+        queue.add(root);
+        BinaryNode presentNode=null;
+        while(!queue.isEmpty()){
+            presentNode=queue.remove();
+            if(presentNode.left!=null){
+                queue.add(presentNode.left);
+            }
+            if(presentNode.right!=null){
+                queue.add(presentNode.right);
+            }
+        }
+        return presentNode;
+    }
+
+    public void deleteDeepestNode(){
+        Queue<BinaryNode> queue=new LinkedList<BinaryNode>();
+        queue.add(root);
+        BinaryNode previousNode, presentNode=null;
+        while (!queue.isEmpty()) {
+            previousNode=presentNode;
+            presentNode=queue.remove();
+            if(previousNode.left==null){
+                previousNode.right=null;
+                return;
+            }
+            if(previousNode.right==null){
+                previousNode.left=null;
+                return;
+            }
+            queue.add(presentNode.left);
+            queue.add(presentNode.right);
+        }
+    }
+
+    public void deleteNode(String value){//tc o(n)--sc o(n)
+        Queue<BinaryNode> queue=new LinkedList<BinaryNode>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            BinaryNode presentNode= queue.remove();
+            if(presentNode.value==value){
+                presentNode.value=getDeepest().value;
+                deleteDeepestNode();
+                System.out.println("the node is deleted");
+                return;
+            }else{
+                if(presentNode.left!=null)queue.add(presentNode.left);
+                if(presentNode.right!=null)queue.add(presentNode.right);
+            }
+        }
+        System.out.println("the node does not exist in this BT");
+    }
+
+    //delete all of the bt just delete the root node, doing so the children will be delete by the garbage collector
+    public void deleteBT(){//tc o(1)--sc o(1)
+        root=null;
+        System.out.println("bt as been deleted successfully");
+    }
+
+
 }

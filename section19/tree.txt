@@ -45,7 +45,17 @@ each node will have 3 components:         | to calculate at which index we need 
                                           |right child = cell(2x+1)-->x=1-->right child[i=3]
 
 
+comparison between ll and arr for binary Tree
 
+                    Array                               Linked list
+                    tc------sc                          tc-------------sc
+
+create               1        n                            1             1
+insert a node        1        1                          n               n
+delete a node        n        1                          n               n
+search               n        1                          n               n
+traverse             n        1 / n                      n               n
+delete               1        1                          1               1
                                           
 
                                         
