@@ -1,0 +1,7 @@
+AVL TREE
+it's a binary search tree where the heights of the left subtree is equal or less than 1 node of the right subtree
+if the difference at any given node is more than one, we have to rebalance using the process called -rotation-
+
+why do we need it?
+we make sure that the tree is nounbalanced, like with all the node as left child of the root node
+
