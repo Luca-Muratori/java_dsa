@@ -1,0 +1,7 @@
+BINARY SEARCH TREE
+use only LL
+it's a tree, in which the left subtree node is less or equal then the parent node value and the right subtree node is higher then the parent node value
+
+why we need it
+perform faster than the binary tree when inserting and deleting nodes
+

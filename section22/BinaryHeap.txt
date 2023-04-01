@@ -1,0 +1,12 @@
+BINAERY HEAP
+is a binary tree with the following propierties:
+-the node at the root must be among all keys present in the binary HEAP
+-it's a complete tree, with all the levels filled, except for the last ones, that they still have the last nodes as left as possible
+
+why we need it?
+to make sure that the tc of inserting and searching is log n
+
+type of binary HEAP
+min heap=the value of the children is greater then the parents
+max heap=the value of each node is more or equal than the value of the parents
+

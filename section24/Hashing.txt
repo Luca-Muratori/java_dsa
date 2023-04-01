@@ -1,0 +1,27 @@
+what is hashing
+method of sorting and indexing data
+allow large amounts of data to be indexed usng keys commonly created by formulas
+
+why
+it's time efficient in case of search operation
+
+terminology
+hash function:function that can map data of arbitrary size to data of fixed size
+key: input data given by the user
+hash value (or value): value returned by hash function
+
+key-->hash function-->hash value
+
+hash table: data structure that can map keys to value
+
+collision: 2 output produce the same value
+
+propierties
+-distributed hash values accordingly in the hash tables(not cause collision)
+-it use all inputs data
+
+COLLISION RESOLUTION TECHNIQUES
+two types:
+-direct chaining
+    in the hash table we insert the location of the first key, and value with the same hash value will be added as linked list from this first elemtn
+    
