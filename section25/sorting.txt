@@ -1,0 +1,22 @@
+SORTING
+arrangin data in a particular format: ascending or descending
+
+TYPES OF SORTING 
+based on the space that is used we can subdivide the sorting in:
+in place:do not require extra space for sorting
+out of place: require extra space for sorting
+
+based on the stability:
+stable: similar elements after the sorting don't change the sequence in which they appear
+unstable: similar elements after the sorting change the sequence in which they appear
+
+TERMINOLOGY
+incrising order:if successive element is greater than the previous one;
+decreasing order: successive element is less then the previous one;
+non increasing order:successive element is less or equal then the previous one;
+non decreasing order:successive element is greater or equal then the previous one;
+
+BUBBLE SORT
+we compare each pair of adjacent items and swap them if they are in the wrong order, repeatedly
+use: input is almost sorted, space is a concernce, easy to implement
+avoid:time complexity is to big

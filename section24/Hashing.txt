@@ -24,4 +24,28 @@ COLLISION RESOLUTION TECHNIQUES
 two types:
 -direct chaining
     in the hash table we insert the location of the first key, and value with the same hash value will be added as linked list from this first elemtn
-    
+-open addressing
+    the value are stored in other vacant buckets, during storage and lookup these value are found using the probing
+    -linear probing: it places new key into closest following empty cell
+    -quadratic probing:adding quadratic polynomial to the index until an empty cell is found;
+    -double hashing:intervall between probes is computed by another hash function
+
+
+PROS AND CONS 
+direct chaining=hash table never get full---huge linked list cause performance leaks
+open addressing=easy implementation---creating a new hash table affect performance
+
+if input sie is known we use open addressing
+
+using delition frequently better direct chaining
+
+PRACTICAL USE 
+used in password storage
+used in file sistem
+
+
+
+
+hashing vs other ds 
+insertion-deletion and search take o 1 , but when is not good implemented it take o n
+

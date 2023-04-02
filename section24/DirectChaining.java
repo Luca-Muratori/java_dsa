@@ -59,4 +59,5 @@ public class DirectChaining {
             System.out.println("word has been deleted");
         }
     }
+
 }
