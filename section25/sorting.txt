@@ -20,3 +20,56 @@ BUBBLE SORT
 we compare each pair of adjacent items and swap them if they are in the wrong order, repeatedly
 use: input is almost sorted, space is a concernce, easy to implement
 avoid:time complexity is to big
+
+SELECTION SORT
+we subdivde the array in 2, one part will be the sorted part and the other the unsorted array
+then we search repeatedly for the minimum value and every time we will add this minimum in the sorted part
+use:we have insufficient memory, easy to implement
+avoid:time is concerne o(N^2)
+
+INSERTION SORT
+divide the array in two part, but we not find the minimum value, so for every number that we delete from the unsorted array
+we check every number with the number in the sorted part so we sort it with every number of the sorted part
+use:we have insufficient memory, easy to implement, we have continuos inflow of number and we want to keep them sorted
+avoid:time is concerne
+
+BUCKET SORT
+we subdivide the array in buckets, like mini array, and sort each basket indivudually, first the value inside, then
+we return the values of every basket in the actual array
+to know how many basket we need, we use the square root of the number of the element, rounded as minimum
+then to know where element goes in which basket we multiply the value of the element witth the number of bucket, divide 
+the result with the maximum value and we round to the minimum the result
+use:when the array is uniformerly distributed, it means the values are not so different
+avoid:space is a concerne
+
+MERGE SORT
+is a divide and conquer algo
+we subdivided the array in minor array until it can't be broken futherly, until we have ine element inside each subdivided
+then we sort two number per time, then we add the 4 element sorting them, and so on
+use:when you need a stable sort, when we need a time n log n 
+avoid: space concerne
+
+QUICK SORT
+divide and conquer
+find a pivot number and put the smller on the left of it and the biggest on the right
+the we continue with this operation for each subarray, on the left and on the right
+use:time expected is  o nlogn
+avoid:space is a concerne, you need stable sort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
