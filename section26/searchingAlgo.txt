@@ -1,0 +1,8 @@
+LINEAR SEARCH o (n)
+items are searched one by one, until we reach the item that we want
+usefull in unsorted arrays
+
+BINARY SEARCH tc o()
+search half of the element
+wirk only on sorted arrays
+

@@ -57,6 +57,17 @@ use:time expected is  o nlogn
 avoid:space is a concerne, you need stable sort
 
 
+HEAP SORT
+first we insert data in a binary heap tree and extract them from Binary heap and store them in an array
+use:
+avoid:
+
+
+
+
+
+
+
 
 
 

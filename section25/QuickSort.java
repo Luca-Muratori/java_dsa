@@ -14,7 +14,7 @@ public class QuickSort {
         return i;
     }
 
-    public static void quickSort(int[] arr, int start, int end) {//tc o n logn --on
+    public static void quickSort(int[] arr, int start, int end) {//tc o n logn --on 
         if (start < end) {
             int pivot = partition(arr, start, end);
             quickSort(arr, start, pivot - 1);

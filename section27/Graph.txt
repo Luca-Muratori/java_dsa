@@ -1,0 +1,32 @@
+consist in a set of nodes connected via edges
+
+TERMINOLOGY
+vertices: are the nodes of the graphs
+edge: line that connect pairs of vertices
+unweighted graph: the edges does not have values
+weighted graph: the edges have values
+undirected graph: the edges does not have a direction
+directed graph: edges have a direction associated with them
+ciclyc graph: graph that have a loop
+aciclyc graph: graph with no loop
+tree: the graph is unideracitonal and aciclyc
+
+TYPES
+directed:
+    -weighted:
+        positive:the edges are positive and directed
+        negative:the weight of the edges are negative
+    -unweighted:there is direction in the edges
+
+undirected:
+    -weighted:
+        positive:the edges are positive with no direction
+        negative:the weight of the edges are negative
+    -unweighted:there is no weight and the edges are undirected
+
+
+RAPPRESENTATION OF GRAPHS 
+adjacency matrix:2d array that rappresent the edges of the graph for each pair of vertices
+adjacency list: collection of unordered linked list, in which each list reppresent the set of neighbors that each vertices have
+
+
