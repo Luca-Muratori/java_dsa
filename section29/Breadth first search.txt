@@ -1,0 +1,1 @@
+it's a process of visiting all vertices in a given graph, first it visit all te nodes in the same level before moving in the next level
