@@ -1,0 +1,10 @@
+minimmum spanning tree
+subset of the edges of connected, weighted and undirected graph which connect all vertices together, have no cycle and minimum total edges
+
+disjoint set 
+ds that keeps tracks of set of elements which are partitioned into disjointed and non overlapping sets, with each set contains representative which helps in identifying that sets.
+3 type:
+make set: used to create initial set
+union set:used to merge 2 given set
+find set: return the set name in which a specified element is 
+
