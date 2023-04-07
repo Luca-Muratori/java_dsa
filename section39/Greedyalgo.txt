@@ -1,0 +1,3 @@
+algo paradigm that built solution piece by piece
+in each step select the best solution that offer most obvious and immediate benefit
+it's perfect for the solutions in which local optimal solutions lead to global solution
