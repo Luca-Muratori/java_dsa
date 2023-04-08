@@ -1,0 +1,2 @@
+break down complex problem until they became easy to solve, then the solution of this subdivision combine to give the solution to the original problem.
+
