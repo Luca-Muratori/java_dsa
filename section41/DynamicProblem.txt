@@ -1,0 +1,2 @@
+algo technique for solving an optimization problem by breaking down to simpler subproblems.
+
